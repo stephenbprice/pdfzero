@@ -1,0 +1,18 @@
+body { color: var(--secondary-color); }
+
+#loader { background-color: var(--secondary-color); }
+
+#editor-canvas-container {
+  position: relative;
+}
+#font-controller {
+  padding-left: 10px;
+}
+canvas.selecting-text-loc:hover {
+  cursor: crosshair;
+}
+#add-text-input {
+  position: absolute;
+  z-index: 999;
+  border: 1px dotted black;
+}

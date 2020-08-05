@@ -1,0 +1,46 @@
+.jumbotron {
+  width: 100%;
+  min-height: 400px;
+  background-color: var(--primary-color);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.jumbotron {
+  display: flex;
+  flex-direction: column;
+}
+
+#tools-list {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#tools-list {
+  list-style-type: none;
+}
+
+.tools-list-card {
+  margin: 80px 40px;
+  cursor: pointer;
+  flex-shrink: 1;
+  min-width: 200px;
+  min-height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+  transition: 0.5s;
+  --webkit-transition: 0.5s;
+  border: 2px solid black;
+}
+.tools-list-card:hover {
+  color: white;
+  background-color: var(--secondary-color);
+}
