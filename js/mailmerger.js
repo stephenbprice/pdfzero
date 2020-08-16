@@ -267,6 +267,7 @@
     const originalBytes = await pdflib.save();
     const filenameConvention = filenameInput.value;
     const zip = new JSZip();
+    loader.loading = true;
     for (let [index, row] of xlsxData.entries()) {
       const pdfCopy = await PDFLib.PDFDocument.load(originalBytes);
       for (let fieldId of Object.keys(fields)) {
@@ -282,6 +283,10 @@
       .then(blob => {
         download(blob, 'pdfzero.zip', 'application/zip');
       })
+      .finally(() => {
+        loader.loading = false
+      })
+    ;
   }
 
   // EVENT LISTENERS
