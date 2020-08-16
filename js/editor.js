@@ -166,7 +166,7 @@
     const oldOffsetBottom = addTextInput.offsetBottom;
     const oldOffsetLeft = addTextInput.offsetLeft;
     addTextInput.style.fontFamily = FONTS[fontInput.value].html;
-    addTextInput.style.fontSize = `${fontSizeInput.value * viewport.scale}pt`;
+    addTextInput.style.fontSize = `${fontSizeInput.value * viewport.scale * 72 / 96}pt`;
     addTextInput.style.width = `${addTextInput.value.length + 1}ch`;
     addTextInput.offsetBottom = oldOffsetBottom;
     addTextInput.offsetLeft = oldOffsetLeft;
