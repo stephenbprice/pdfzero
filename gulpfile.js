@@ -1,5 +1,6 @@
 const gulp = require('gulp');
 const browsersync = require('browser-sync').create();
+const cp = require('child_process');
 const del = require('del');
 
 function clean () {
@@ -53,14 +54,20 @@ function images (done) {
   done();
 }
 
+function jekyll (done) {
+  cp.spawn("jekyll", ["build", "--source", "./blog", "--destination", "./docs/blog"], { stdio: "inherit" });
+  done();
+}
+
 function watchFiles () {
   gulp.watch('./src/css/*.css', css);
   gulp.watch('./src/js/*.js', js);
   gulp.watch('./src/*.html', html);
   gulp.watch('./src/images/*', images);
+  gulp.watch('./blog/**/*', gulp.series(jekyll, browserSyncReload));
 }
 
-const build = gulp.series(clean, gulp.parallel(css, js, html, images));
+const build = gulp.series(clean, gulp.parallel(css, js, html, images, jekyll));
 const watch = gulp.series(build, gulp.parallel(watchFiles, browserSync));
 
 exports.clean = clean;
@@ -68,5 +75,6 @@ exports.css = css;
 exports.js = js;
 exports.html = html;
 exports.images = images;
+exports.jekyll = jekyll;
 exports.build = build;
 exports.watch = watch;
