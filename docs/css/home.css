@@ -6,11 +6,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
-}
-
-.jumbotron {
-  display: flex;
   flex-direction: column;
 }
 
@@ -27,7 +22,7 @@
 }
 
 .tools-list-card {
-  margin: 80px 40px;
+  margin: 10px 20px;
   cursor: pointer;
   flex-shrink: 1;
   min-width: 200px;
