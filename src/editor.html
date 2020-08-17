@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141993091-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-141993091-2');
+    </script>
+    <meta charset="UTF-8">
+    <title>PDF Editor | PDFZero</title>
+
+    <!-- Style -->
+    <link rel="stylesheet" type="text/css" href="css/core.css">
+    <link rel="stylesheet" type="text/css" href="css/editor.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bangers&display=swap">
+  </head>
+
+
+  <body class="loading">
+    <noscript>
+      <strong>
+        We're sorry but PDFZero doesn't work properly without
+        JavaScript enabled. Please enable it to continue.
+      </strong>
+    </noscript>
+
+    <!-- LOADING... -->
+    <div id="loader" title="2">
+      <svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+         width="40px" height="40px" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+      <path fill="#000" d="M43.935,25.145c0-10.318-8.364-18.683-18.683-18.683c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615c8.072,0,14.615,6.543,14.615,14.615H43.935z">
+        <animateTransform attributeType="xml"
+          attributeName="transform"
+          type="rotate"
+          from="0 25 25"
+          to="360 25 25"
+          dur="0.6s"
+          repeatCount="indefinite"/>
+        </path>
+      </svg>
+    </div>
+
+
+    <div id="header">
+      <img src="assets/logo.png" />
+      <div class="download hidden">
+        <i class="material-icons large">save</i>
+      </div>
+    </div>
+
+    <div id="content">
+
+      <div id="pdf-upload-container">
+        <div id="pdf-upload-btn" class="clickable hover">
+          <i class="material-icons">file_upload</i>
+          Upload a PDF
+        </div>
+        <input type="file" accept=".pdf" id="pdf-upload-input" class="hidden">
+        </input>
+      </div>
+
+      <div id="editor" class="flex-row flex-center hidden">
+        <div id="decrement-btn" class="flex clickable hover">
+          <i class="material-icons">chevron_left</i>
+        </div>
+        <div class="flex">
+          <div class="flex-column">
+            <div class="flex-row flex-center">
+              <div class="flex">
+                <div id="add-text-btn" class="clickable hover">
+                  <i class="material-icons">text_fields</i>
+                </div>
+                <div id="add-text-controls" class="flex-row flex-center hidden">
+                  <div id="font-size-controller">
+                    <label for="fontSize">Font Size: </label>
+                    <select name="fontSize" id="font-size-selector">
+                      <option value="8">8</option>
+                      <option value="12" selected>12</option>
+                      <option value="14">14</option>
+                      <option value="16">16</option>
+                      <option value="18">18</option>
+                      <option value="20">20</option>
+                      <option value="22">22</option>
+                      <option value="24">24</option>
+                    </select>
+                  </div>
+                  <div id="font-controller">
+                    <label for="font">Font: </label>
+                    <select name="font" id="font-selector">
+                      <option value="TimesRoman" selected>Times Roman</option>
+                      <option value="Courier">Courier</option>
+                      <option value="Helvetica">Helvetica</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex elevated" id="editor-canvas-container">
+              <canvas id="editor-canvas"></canvas>
+              <input id="add-text-input" class="hidden" type="text"/>
+            </div>
+          </div>
+        </div>
+        <div id="increment-btn" class="flex clickable hover">
+          <i class="material-icons">chevron_right</i>
+        </div>
+      </div>
+
+    </div>
+
+    <div id="footer">
+      <a href="mailto:help@pdfzero.com" target="_blank">help</a>
+      <a href="https://www.pdfzero.com/blog">blog</a>
+    </div>
+
+  </body>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@2.0.943/build/pdf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@2.0.943/web/pdf_viewer.js"></script>
+  <script>
+    pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdn.jsdelivr.net/npm/pdfjs-dist@2.0.943/build/pdf.worker.js"
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/pdf-lib@1.8.0/dist/pdf-lib.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/downloadjs@1.4.7/download.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
+  <script src="js/core.js"></script>
+  <script src="js/pdfz.js"></script>
+  <script src="js/loader.js"></script>
+  <script src="js/editor.js"></script>
+
+
+</html>

@@ -1,0 +1,48 @@
+body { color: var(--secondary-color); }
+
+#loader { background-color: var(--secondary-color); }
+
+#mailmerge-canvas-container {
+  position: relative;
+}
+
+#sheet-input-container {
+  display: flex;
+  flex-direction: row;
+}
+
+#sheet-input-list {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  cursor: pointer;
+  flex: 1;
+}
+.sheet-input-btn {
+  flex: 1;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+.sheet-input-btn.active {
+  color: var(--primary-color);
+  text-decoration: underline black;
+}
+
+#filename-input-container {
+  padding-bottom: 20px;
+  display: flex;
+  flex-flow: flex-wrap;
+  align-items: center;
+}
+#filename-input-container label {
+  margin: 5px 10px 5px 0px;
+}
+#filename-input-container input {
+  flex: 1;
+}
+
+.acroField {
+  background-color: var(--secondary-color);
+  opacity: 0.7;
+  position: absolute;
+}

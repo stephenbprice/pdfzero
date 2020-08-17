@@ -1,0 +1,24 @@
+{
+  "name": "pdfzero",
+  "version": "1.0.0",
+  "description": "A collection of cloudless PDF tools for the browser",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stephenbprice/pdfzero.git"
+  },
+  "author": "Stephen Price",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stephenbprice/pdfzero/issues"
+  },
+  "homepage": "https://github.com/stephenbprice/pdfzero#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.12",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2"
+  }
+}

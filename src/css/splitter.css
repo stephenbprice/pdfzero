@@ -1,0 +1,50 @@
+body { color: var(--secondary-color); }
+
+#loader { background-color: var(--secondary-color); }
+
+/* REMOVE ARROWS FROM NUM PAGE INPUT */
+#interval-input::-webkit-outer-spin-button,
+#interval-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+#interval-input {
+  -moz-appearance: textfield; /* Firefox */
+}
+#interval-input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid var(--secondary-color);
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 18px;
+  width: 6ch;
+}
+#interval-input:focus {
+  outline: none;
+}
+
+#packets-list {
+  list-style: none;
+  padding: 0px;
+}
+
+.packet-pages-list {
+  display: block;
+  overflow: none;
+  list-style: none;
+  padding: 0;
+}
+
+.packet-pages-list-item {
+  margin: 0;
+  padding: 20px;
+  display: block;
+  transition: ease-in .4s;
+}
+.packet-pages-list-item:not(:first-child) {
+  margin-top:-95%;
+}
+.packet-pages-list-item:not(:last-child):hover {
+  margin-bottom: 95%;
+}

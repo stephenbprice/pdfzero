@@ -1,0 +1,7 @@
+body { color: var(--secondary-color); }
+
+#loader { background-color: var(--secondary-color); }
+
+#formfiller-canvas-container {
+  position: relative;
+}

@@ -1,0 +1,26 @@
+body { color: var(--secondary-color); }
+
+#loader { background-color: var(--secondary-color); }
+
+.page-wrapper {
+  position: relative;
+  margin: 25px;
+}
+
+.page-wrapper .delete-page {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  color: white;
+  background-color: red;
+  border-radius: 100%;
+}
+
+.page-wrapper .rotate-page {
+  position: absolute;
+  top: 43%;
+  left: 43%;
+  color: white;
+  background-color: gray;
+  border-radius: 100%;
+}
