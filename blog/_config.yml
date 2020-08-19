@@ -3,6 +3,7 @@ email:              help@pdfzero.com
 author:             PDFZero
 baseurl:            "/blog"
 url:                "https://www.pdfzero.com"
+permalink:          /:title.html
 
 # Social Profiles
 twitter_username:   PDFZero

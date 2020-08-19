@@ -2,7 +2,6 @@
 layout: default
 ---
 
-<!-- Page Header -->
 <header class="masthead">
   <div class="overlay"></div>
   <div class="container">
@@ -22,8 +21,14 @@ layout: default
 
       {{ content }}
 
+      <article class="post-preview">
+        <a href="{{"/about.html" | relative_url }}">
+          <h2 class="post-title">What is PDFZero</h2>
+        </a>
+      </article>
+      <hr>
       <!-- Home Post List -->
-      {% for post in site.posts limit %}
+      {% for post in site.posts %}
         <article class="post-preview">
           <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
             <h2 class="post-title">{{ post.title }}</h2>
