@@ -4,6 +4,14 @@ author:             PDFZero
 baseurl:            "/blog"
 url:                "https://www.pdfzero.com"
 permalink:          /:title.html
+exclude: [
+                    "_app",
+                    "_config.yml",
+                    "Gemfile",
+                    "gulpfile.js",
+                    "package-lock.json",
+                    "package.json"
+]
 
 # Social Profiles
 twitter_username:   PDFZero
