@@ -1,7 +1,7 @@
 title:              PDFZero
 email:              help@pdfzero.com
 author:             PDFZero
-baseurl:            "/blog"
+baseurl:            "pdfzero/blog"
 url:                "https://www.pdfzero.com"
 permalink:          /:title.html
 exclude: [
